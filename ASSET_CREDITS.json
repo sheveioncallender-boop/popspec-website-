@@ -1,0 +1,37 @@
+[
+  {
+    "file": "popspec_website/static/src/img/hero-woman.jpg",
+    "source": "https://unsplash.com/photos/wYg4pV9pP-k",
+    "download": "https://images.unsplash.com/photo-1736997426709-402dc955ef5c?auto=format&fit=max&w=1600&q=85",
+    "license": "https://unsplash.com/license",
+    "use": "Editorial stock photography, not representations of Pop Spec staff, patients, or inventory."
+  },
+  {
+    "file": "popspec_website/static/src/img/hero-man.jpg",
+    "source": "https://unsplash.com/photos/K8kDDGljn90",
+    "download": "https://images.unsplash.com/photo-1678282955808-de92256dbd59?auto=format&fit=max&w=1600&q=85",
+    "license": "https://unsplash.com/license",
+    "use": "Editorial stock photography, not representations of Pop Spec staff, patients, or inventory."
+  },
+  {
+    "file": "popspec_website/static/src/img/editorial.jpg",
+    "source": "https://unsplash.com/photos/LEFXUjafXk4",
+    "download": "https://images.unsplash.com/photo-1639596009496-d24f966adc25?auto=format&fit=max&w=1600&q=85",
+    "license": "https://unsplash.com/license",
+    "use": "Editorial stock photography, not representations of Pop Spec staff, patients, or inventory."
+  },
+  {
+    "file": "popspec_website/static/src/img/frames.jpg",
+    "source": "https://unsplash.com/photos/znVk7Z64FJY",
+    "download": "https://images.unsplash.com/photo-1721958080220-7fbe8e83f608?auto=format&fit=max&w=1600&q=85",
+    "license": "https://unsplash.com/license",
+    "use": "Editorial stock photography, not representations of Pop Spec staff, patients, or inventory."
+  },
+  {
+    "file": "popspec_website/static/src/img/detail.jpg",
+    "source": "https://unsplash.com/photos/Mv7kokwzIMw",
+    "download": "https://images.unsplash.com/photo-1614715838608-dd527c46231d?auto=format&fit=max&w=1600&q=85",
+    "license": "https://unsplash.com/license",
+    "use": "Editorial stock photography, not representations of Pop Spec staff, patients, or inventory."
+  }
+]

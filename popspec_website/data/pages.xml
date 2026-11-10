@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="page_home" model="website.page">
+      <field name="name">Home</field>
+      <field name="url">/popspec-home</field>
+      <field name="type">qweb</field>
+      <field name="key">popspec_website.page_home</field>
+      <field name="website_meta_title">Home | Pop Spec Ltd</field>
+      <field name="website_meta_description">Discover Pop Spec Ltd: eyewear with personality, optical frames, lens enquiries and a personal approach.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="popspec_website.page_home">
+          <t t-call="website.layout">
+            <div id="wrap" class="popspec-content oe_structure">
+              <section class="banner-slider" aria-roledescription="carousel" aria-label="Discover Pop Spec">
+                <div class="banner-slide active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                  <div class="banner-copy">
+                    <span class="eyebrow">EVERYDAY VISION. INDIVIDUAL STYLE.</span>
+                    <h1>See clearly.<br/><em>Be yourself.</em></h1>
+                    <p>Your eyewear should feel as good as it looks. Explore frames, talk lenses and find your next favourite pair.</p>
+                    <div class="hero-buttons">
+                      <a href="/shop" class="button">Explore frames<span aria-hidden="true">↗</span></a>
+                      <a href="/visit-us" class="text-link">Talk to us<span aria-hidden="true">↗</span></a>
+                    </div>
+                    <span class="hero-signature">PRECISION OPTICAL PRODUCTS + SPECTACLES</span>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/popspec_website/static/src/img/hero-woman.jpg" alt="Woman wearing statement optical frames" class="" loading="eager" decoding="async" width="1200" height="1400"/>
+                    <span class="photo-label">THE POP SPEC PERSPECTIVE</span>
+                  </div>
+                </div>
+                <div class="banner-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true" inert="inert">
+                  <div class="banner-copy">
+                    <span class="eyebrow">A DIFFERENT POINT OF VIEW</span>
+                    <h2>Made for life.<br/><em>Styled for you.</em></h2>
+                    <p>From an understated everyday look to something with a little more character. Find your own perspective.</p>
+                    <div class="hero-buttons">
+                      <a href="/shop" class="button">Find your style<span aria-hidden="true">↗</span></a>
+                      <a href="/visit-us" class="text-link">Talk to us<span aria-hidden="true">↗</span></a>
+                    </div>
+                    <span class="hero-signature">PRECISION OPTICAL PRODUCTS + SPECTACLES</span>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/popspec_website/static/src/img/hero-man.jpg" alt="Man wearing round optical frames" class="" loading="eager" decoding="async" width="1200" height="1400"/>
+                    <span class="photo-label">THE POP SPEC PERSPECTIVE</span>
+                  </div>
+                </div>
+                <div class="banner-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true" inert="inert">
+                  <div class="banner-copy">
+                    <span class="eyebrow">THE DETAILS MAKE THE DIFFERENCE</span>
+                    <h2>A little detail.<br/><em>A lot of you.</em></h2>
+                    <p>A comfortable fit. A considered shape. A pair of spectacles that feels like part of your day.</p>
+                    <div class="hero-buttons">
+                      <a href="/optical-services" class="button">Explore our approach<span aria-hidden="true">↗</span></a>
+                      <a href="/visit-us" class="text-link">Talk to us<span aria-hidden="true">↗</span></a>
+                    </div>
+                    <span class="hero-signature">PRECISION OPTICAL PRODUCTS + SPECTACLES</span>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/popspec_website/static/src/img/editorial.jpg" alt="Woman wearing thin metal optical frames" class="" loading="eager" decoding="async" width="1200" height="1400"/>
+                    <span class="photo-label">THE POP SPEC PERSPECTIVE</span>
+                  </div>
+                </div>
+                <div class="banner-controls">
+                  <button type="button" class="slide-prev" aria-label="Previous banner">←</button>
+                  <div class="slide-dots">
+                    <button type="button" class="selected" aria-label="Show banner 1" aria-pressed="true"/>
+                    <button type="button" aria-label="Show banner 2" aria-pressed="false"/>
+                    <button type="button" aria-label="Show banner 3" aria-pressed="false"/>
+                  </div>
+                  <button type="button" class="slide-next" aria-label="Next banner">→</button>
+                  <button type="button" class="slide-pause" aria-label="Pause banners">Ⅱ</button>
+                </div>
+              </section>
+              <div class="ps-values">
+                <div class="wrap">
+                  <span>Frames with personality</span>
+                  <span>Lenses for your lifestyle</span>
+                  <span>A fit that feels right</span>
+                </div>
+              </div>
+              <t t-call="popspec_website.category_circles"/>
+              <t t-call="popspec_website.featured_products"/>
+              <section class="ps-editorial wrap">
+                <div class="section-heading">
+                  <div>
+                    <span class="eyebrow">LOOK GOOD. FEEL LIKE YOU.</span>
+                    <h2>More than a pair of glasses.</h2>
+                  </div>
+                  <p>There’s a lot to love about finding the right pair.<br/>Start with what matters to you.</p>
+                </div>
+                <div class="ps-editorial-grid">
+                  <a href="/shop" class="ps-story large">
+                    <img src="/popspec_website/static/src/img/frames.jpg" alt="An editorial selection of clear, tortoiseshell and black eyeglasses" class="" loading="lazy" decoding="async" width="1200" height="1400"/>
+                    <div>
+                      <span class="eyebrow">FIND YOUR EXPRESSION</span>
+                      <h3>A frame for your point of view.</h3>
+                      <span class="text-link">Explore the catalogue ↗</span>
+                    </div>
+                  </a>
+                  <a href="/lens-guide" class="ps-story small">
+                    <img src="/popspec_website/static/src/img/detail.jpg" alt="Close-up of a fine metal eyeglass frame" class="" loading="lazy" decoding="async" width="1200" height="1400"/>
+                    <div>
+                      <span class="eyebrow">BEYOND THE FRAME</span>
+                      <h3>Let’s talk lenses.</h3>
+                      <span class="text-link">Explore the lens guide ↗</span>
+                    </div>
+                  </a>
+                </div>
+              </section>
+              <section class="ps-split wrap">
+                <div class="ps-portrait">
+                  <img src="/popspec_website/static/src/img/hero-man.jpg" alt="Portrait of a man wearing round glasses" class="" loading="lazy" decoding="async" width="1200" height="1400"/>
+                  <span>YOUR LOOK. YOUR LIFE. YOUR POP SPEC.</span>
+                </div>
+                <div class="split-copy">
+                  <span class="eyebrow">A PERSONAL PERSPECTIVE</span>
+                  <h2>Good eyewear starts<br/>with <em>you.</em></h2>
+                  <p>Your style, your routine and your prescription all have a part to play. We’re here to help you bring those details together.</p>
+                  <div class="ps-steps">
+                    <div>
+                      <strong>Discover your style</strong>
+                      <p>Explore shapes, colours and finishes that feel like you.</p>
+                    </div>
+                    <div>
+                      <strong>Talk through the details</strong>
+                      <p>Bring your prescription and discuss your lens needs with the team.</p>
+                    </div>
+                    <div>
+                      <strong>Make it a comfortable fit</strong>
+                      <p>Ask about measurements, fitting and caring for your spectacles.</p>
+                    </div>
+                  </div>
+                  <a href="/about-us" class="text-link">Get to know Pop Spec<span aria-hidden="true">↗</span></a>
+                </div>
+              </section>
+              <section class="ps-cta">
+                <div class="wrap ps-cta-inner">
+                  <div>
+                    <span class="eyebrow">LET’S FIND YOUR NEXT PAIR</span>
+                    <h2>A new look.<br/>A clearer outlook.</h2>
+                  </div>
+                  <div>
+                    <p>Let’s talk frames, lenses and the little details that make them yours.</p>
+                    <a href="/visit-us" class="button light">Talk to Pop Spec<span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_services" model="website.page">
+      <field name="name">Our Services</field>
+      <field name="url">/optical-services</field>
+      <field name="type">qweb</field>
+      <field name="key">popspec_website.page_services</field>
+      <field name="website_meta_title">Our Services | Pop Spec Ltd</field>
+      <field name="website_meta_description">Explore frame selection, prescription enquiries, fitting and aftercare at Pop Spec Ltd.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="popspec_website.page_services">
+          <t t-call="website.layout">
+            <div id="wrap" class="popspec-content oe_structure">
+              <section class="ps-page-intro wrap">
+                <span class="eyebrow">THE POP SPEC APPROACH</span>
+                <h1>Eyewear, with you<br/><em>at the centre.</em></h1>
+                <p>From your first frame selection to the finishing details, let’s find the right next step for your spectacles.</p>
+              </section>
+              <section class="ps-wide-photo wrap">
+                <img src="/popspec_website/static/src/img/frames.jpg" alt="Three different styles of optical frames" class="" loading="lazy" decoding="async" width="1200" height="1400"/>
+              </section>
+              <section class="wrap ps-service-grid">
+                <article id="frames">
+                  <span class="eyebrow">MAKE IT YOURS</span>
+                  <h2>Frame selection</h2>
+                  <p>Explore the catalogue and speak with us about shape, size, colour and a comfortable fit.</p>
+                  <a href="/visit-us" class="text-link">Talk to the team<span aria-hidden="true">↗</span></a>
+                </article>
+                <article id="prescriptions">
+                  <span class="eyebrow">BRING THE DETAILS</span>
+                  <h2>Prescription enquiries</h2>
+                  <p>Have a current prescription? Contact the team about your next pair and what information to bring.</p>
+                  <a href="/visit-us" class="text-link">Talk to the team<span aria-hidden="true">↗</span></a>
+                </article>
+                <article id="fitting">
+                  <span class="eyebrow">THE FINISHING TOUCH</span>
+                  <h2>Fitting &amp; aftercare</h2>
+                  <p>Ask about fitting, adjustments and caring for your spectacles. Contact us first to confirm what is available for your frame.</p>
+                  <a href="/visit-us" class="text-link">Talk to the team<span aria-hidden="true">↗</span></a>
+                </article>
+                <article id="support">
+                  <span class="eyebrow">HERE TO HELP</span>
+                  <h2>Orders &amp; warranty enquiries</h2>
+                  <p>For an existing order, repair or warranty question, have your receipt or order reference ready so we can help.</p>
+                  <a href="/visit-us" class="text-link">Talk to the team<span aria-hidden="true">↗</span></a>
+                </article>
+              </section>
+              <section class="ps-cta">
+                <div class="wrap ps-cta-inner">
+                  <div>
+                    <span class="eyebrow">LET’S FIND YOUR NEXT PAIR</span>
+                    <h2>A new look.<br/>A clearer outlook.</h2>
+                  </div>
+                  <div>
+                    <p>Let’s talk frames, lenses and the little details that make them yours.</p>
+                    <a href="/visit-us" class="button light">Talk to Pop Spec<span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_lenses" model="website.page">
+      <field name="name">Lens Guide</field>
+      <field name="url">/lens-guide</field>
+      <field name="type">qweb</field>
+      <field name="key">popspec_website.page_lenses</field>
+      <field name="website_meta_title">Lens Guide | Pop Spec Ltd</field>
+      <field name="website_meta_description">A starting point for discussing lens options and your spectacles with Pop Spec Ltd.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="popspec_website.page_lenses">
+          <t t-call="website.layout">
+            <div id="wrap" class="popspec-content oe_structure">
+              <section class="ps-page-intro wrap">
+                <span class="eyebrow">BEYOND THE FRAME</span>
+                <h1>A clearer view of<br/><em>your options.</em></h1>
+                <p>Lens choices depend on your prescription and everyday needs. Use this guide as a starting point for a conversation with the team.</p>
+              </section>
+              <section class="wrap ps-lens-grid">
+                <article>
+                  <span class="lens-symbol" aria-hidden="true">◯</span>
+                  <h2>Single vision</h2>
+                  <p>A single prescribed lens power for a particular viewing need. Ask which options suit your prescription.</p>
+                </article>
+                <article>
+                  <span class="lens-symbol" aria-hidden="true">◎</span>
+                  <h2>Multifocal options</h2>
+                  <p>Lenses with different viewing zones. Discuss suitability, measurements and the adjustment period with your optical professional.</p>
+                </article>
+                <article>
+                  <span class="lens-symbol" aria-hidden="true">☼</span>
+                  <h2>Sun &amp; lens finishes</h2>
+                  <p>Ask about available tint, coating and light-responsive options, including their specifications and care requirements.</p>
+                </article>
+              </section>
+              <section class="ps-split wrap">
+                <div class="ps-portrait landscape">
+                  <img src="/popspec_website/static/src/img/detail.jpg" alt="Detail of a metal eyeglass frame and lenses" class="" loading="lazy" decoding="async" width="1200" height="1400"/>
+                </div>
+                <div class="split-copy">
+                  <span class="eyebrow">BRING YOUR QUESTIONS</span>
+                  <h2>The right details.<br/>A better conversation.</h2>
+                  <ul class="ps-checklist">
+                    <li>Your current prescription</li>
+                    <li>Your current spectacles, if available</li>
+                    <li>How you use your glasses each day</li>
+                    <li>Any fitting or comfort concerns</li>
+                  </ul>
+                  <p>Lens availability, pricing and suitability are confirmed by the team. Online frame purchases do not replace prescription review or fitting.</p>
+                  <a href="/visit-us" class="button">Ask about lenses<span aria-hidden="true">↗</span></a>
+                </div>
+              </section>
+              <section class="ps-cta">
+                <div class="wrap ps-cta-inner">
+                  <div>
+                    <span class="eyebrow">LET’S FIND YOUR NEXT PAIR</span>
+                    <h2>A new look.<br/>A clearer outlook.</h2>
+                  </div>
+                  <div>
+                    <p>Let’s talk frames, lenses and the little details that make them yours.</p>
+                    <a href="/visit-us" class="button light">Talk to Pop Spec<span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_about" model="website.page">
+      <field name="name">About Us</field>
+      <field name="url">/about-us</field>
+      <field name="type">qweb</field>
+      <field name="key">popspec_website.page_about</field>
+      <field name="website_meta_title">About Us | Pop Spec Ltd</field>
+      <field name="website_meta_description">Get to know Pop Spec Ltd — Precision Optical Products + Spectacles.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="popspec_website.page_about">
+          <t t-call="website.layout">
+            <div id="wrap" class="popspec-content oe_structure">
+              <section class="ps-page-intro wrap">
+                <span class="eyebrow">PRECISION OPTICAL PRODUCTS + SPECTACLES</span>
+                <h1>A fresh perspective.<br/><em>A personal touch.</em></h1>
+                <p>Welcome to Pop Spec Ltd. A place to explore eyewear, ask questions and find a look that feels like you.</p>
+              </section>
+              <section class="ps-split wrap">
+                <div class="ps-portrait">
+                  <img src="/popspec_website/static/src/img/editorial.jpg" alt="Woman wearing gold-coloured optical frames" class="" loading="lazy" decoding="async" width="1200" height="1400"/>
+                </div>
+                <div class="split-copy">
+                  <span class="eyebrow">THIS IS POP SPEC</span>
+                  <h2>Style meets<br/>everyday vision.</h2>
+                  <p>Choosing spectacles is personal. The frame you reach for every morning should work with your day and reflect your personality.</p>
+                  <p>Explore our online catalogue, then speak with the team about your prescription, lens requirements and next steps.</p>
+                  <a href="/shop" class="button">Explore the catalogue<span aria-hidden="true">↗</span></a>
+                  <a href="/visit-us" class="text-link">Get in touch<span aria-hidden="true">↗</span></a>
+                </div>
+              </section>
+              <section class="ps-cta">
+                <div class="wrap ps-cta-inner">
+                  <div>
+                    <span class="eyebrow">LET’S FIND YOUR NEXT PAIR</span>
+                    <h2>A new look.<br/>A clearer outlook.</h2>
+                  </div>
+                  <div>
+                    <p>Let’s talk frames, lenses and the little details that make them yours.</p>
+                    <a href="/visit-us" class="button light">Talk to Pop Spec<span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+    <record id="page_contact" model="website.page">
+      <field name="name">Visit &amp; Contact</field>
+      <field name="url">/visit-us</field>
+      <field name="type">qweb</field>
+      <field name="key">popspec_website.page_contact</field>
+      <field name="website_meta_title">Visit &amp; Contact | Pop Spec Ltd</field>
+      <field name="website_meta_description">Contact Pop Spec Ltd at 620-8711 or 760-0838. Email popspecltd@gmail.com.</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="is_published" eval="True"/>
+      <field name="arch" type="xml">
+        <t t-name="popspec_website.page_contact">
+          <t t-call="website.layout">
+            <div id="wrap" class="popspec-content oe_structure">
+              <section class="ps-page-intro wrap">
+                <span class="eyebrow">LET’S TALK</span>
+                <h1>Your next pair<br/><em>starts here.</em></h1>
+                <p>Ask about frames, prescriptions, fitting or an existing order. We’ll help you work out the next step.</p>
+              </section>
+              <section class="wrap ps-contact-grid">
+                <article>
+                  <span class="eyebrow">GIVE US A CALL</span>
+                  <h2>Talk to the team.</h2>
+                  <a t-if="website.popspec_phone" t-att-href="'tel:' + website.popspec_phone" class="contact-large" t-field="website.popspec_phone"/>
+                  <a t-if="website.popspec_phone_alt" t-att-href="'tel:' + website.popspec_phone_alt" class="contact-large" t-field="website.popspec_phone_alt"/>
+                  <p>For appointment availability or an order update, please call ahead.</p>
+                </article>
+                <article>
+                  <span class="eyebrow">DROP US A LINE</span>
+                  <h2>Send an enquiry.</h2>
+                  <a t-if="website.popspec_email" t-att-href="'mailto:' + website.popspec_email" t-field="website.popspec_email"/>
+                  <p>For general questions, send a message using our enquiry form. Please avoid sending clinical records through general enquiries.</p>
+                  <a href="/contactus" class="button">Make an enquiry <span>↗</span></a>
+                  <a t-if="website._popspec_whatsapp_url()" t-att-href="website._popspec_whatsapp_url()" class="text-link" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+                </article>
+                <article>
+                  <span class="eyebrow">PLAN YOUR VISIT</span>
+                  <h2>Come see us.</h2>
+                  <p t-if="website.popspec_address" t-field="website.popspec_address" class="preserve-lines"/>
+                  <p t-else="">Call us to confirm our location and arrange your visit.</p>
+                  <p t-if="website.popspec_opening_hours" t-field="website.popspec_opening_hours" class="preserve-lines"/>
+                  <a t-if="website._popspec_maps_url()" t-att-href="website._popspec_maps_url()" target="_blank" rel="noopener" class="text-link">Get directions ↗</a>
+                </article>
+              </section>
+              <section class="wrap ps-faq">
+                <span class="eyebrow">A FEW HELPFUL DETAILS</span>
+                <h2>Before you get in touch.</h2>
+                <details>
+                  <summary>Can I browse frames online?</summary>
+                  <p>Yes. Explore our published catalogue for current product information. Contact the team for help with availability and your prescription requirements.</p>
+                </details>
+                <details>
+                  <summary>How do I arrange a visit?</summary>
+                  <p>Call or send an enquiry to request a suitable time. Your appointment is confirmed directly by the team.</p>
+                </details>
+                <details>
+                  <summary>What should I bring?</summary>
+                  <p>Bring your current prescription and spectacles if available. For an order or warranty enquiry, bring your receipt or order reference.</p>
+                </details>
+                <details>
+                  <summary>Can you help with an existing order?</summary>
+                  <p>Please contact us with your order reference. You can also view your online orders through My Account.</p>
+                </details>
+              </section>
+              <section class="ps-cta">
+                <div class="wrap ps-cta-inner">
+                  <div>
+                    <span class="eyebrow">LET’S FIND YOUR NEXT PAIR</span>
+                    <h2>A new look.<br/>A clearer outlook.</h2>
+                  </div>
+                  <div>
+                    <p>Let’s talk frames, lenses and the little details that make them yours.</p>
+                    <a href="/visit-us" class="button light">Talk to Pop Spec<span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+      </field>
+    </record>
+  </data>
+</odoo>

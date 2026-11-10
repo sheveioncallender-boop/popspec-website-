@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="category_circles" name="Pop Spec live category cards">
+        <t t-set="popspec_categories" t-value="website._popspec_categories()"/>
+        <section t-if="popspec_categories" id="popspec-categories" class="popspec-category-section wrap" aria-label="Find your frame of mind." contenteditable="false">
+            <div class="center-heading"><span class="eyebrow">YOUR STYLE. YOUR CHOICE.</span><h2>Find your frame of mind.</h2></div>
+            <div class="popspec-category-circles">
+                <a t-foreach="popspec_categories" t-as="category" t-att-href="'/shop/category/%s' % website.env['ir.http']._slug(category)" class="popspec-category">
+                    <span class="popspec-category-image"><img t-att-src="'/web/image/product.public.category/%s/image_1024' % category.id" t-att-alt="category.name" width="180" height="180" loading="lazy"/></span>
+                    <h3 t-field="category.name"/>
+                </a>
+            </div>
+        </section>
+    </template>
+    <template id="featured_products" name="Pop Spec published product selection">
+        <t t-set="popspec_products" t-value="website._popspec_featured_products()"/>
+        <section t-if="popspec_products" class="wrap popspec-featured-section" contenteditable="false">
+            <!-- Use native Odoo pricelist/tax/fiscal-position calculations for each visitor. -->
+            <t t-set="popspec_prices" t-value="popspec_products._get_sales_prices(website)"/>
+            <div class="section-heading"><div><span class="eyebrow">THE FRAME EDIT</span><h2>A fresh perspective.</h2></div><a href="/shop" class="quiet-link">Explore the catalogue <span aria-hidden="true">→</span></a></div>
+            <div class="popspec-product-grid">
+                <article t-foreach="popspec_products" t-as="product" class="popspec-product-card">
+                    <a t-att-href="product.website_url" class="popspec-product-photo"><img t-att-src="'/web/image/product.template/%s/image_1024' % product.id" t-att-alt="product.name" width="512" height="512" loading="lazy"/></a>
+                    <div class="popspec-product-copy"><h3><a t-att-href="product.website_url" t-field="product.name"/></h3>
+                        <t t-set="price" t-value="popspec_prices[product.id]"/>
+                        <div class="popspec-product-price" t-if="not website.prevent_zero_price_sale or price['price_reduce']">
+                            <del t-if="price.get('base_price') and price['base_price'] &gt; price['price_reduce']"><span t-out="price['base_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/></del>
+                            <strong t-out="price['price_reduce']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                        </div>
+                        <a t-att-href="product.website_url" class="popspec-product-link">Discover frame <span aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </template>
+</odoo>

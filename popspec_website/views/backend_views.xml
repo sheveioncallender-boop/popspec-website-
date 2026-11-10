@@ -1,0 +1,12 @@
+<odoo>
+<record id="settings_popspec" model="ir.ui.view"><field name="name">Pop Spec website settings</field><field name="model">res.config.settings</field><field name="inherit_id" ref="website.res_config_settings_view_form"/><field name="arch" type="xml"><xpath expr="//app[@name='website']" position="inside"><block title="Pop Spec Ltd" name="popspec_settings">
+<setting string="Pop Spec branding"><field name="popspec_brand_enabled"/></setting>
+<setting string="Telephone"><field name="popspec_phone"/></setting><setting string="Second telephone"><field name="popspec_phone_alt"/></setting>
+<setting string="Email"><field name="popspec_email"/></setting>
+<setting string="WhatsApp" help="Enter a confirmed WhatsApp number with country code and digits only. Blank hides WhatsApp links."><field name="popspec_whatsapp"/></setting>
+<setting string="Address" help="Add the confirmed store address. Configure company details separately for invoices and native contact forms."><field name="popspec_address"/></setting>
+<setting string="Opening hours"><field name="popspec_opening_hours"/></setting>
+</block></xpath></field></record>
+<record id="category_popspec" model="ir.ui.view"><field name="name">Pop Spec category settings</field><field name="model">product.public.category</field><field name="inherit_id" ref="website_sale.product_public_category_form_view"/><field name="arch" type="xml"><field name="parent_id" position="after"><field name="popspec_homepage_featured"/></field></field></record>
+<record id="product_popspec" model="ir.ui.view"><field name="name">Pop Spec product merchandising</field><field name="model">product.template</field><field name="inherit_id" ref="product.product_template_form_view"/><field name="arch" type="xml"><xpath expr="//page[@name='sales']" position="inside"><group string="Pop Spec Website"><field name="popspec_homepage_featured"/></group></xpath></field></record>
+</odoo>
