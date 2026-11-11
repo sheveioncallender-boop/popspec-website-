@@ -33,5 +33,41 @@
     "download": "https://images.unsplash.com/photo-1614715838608-dd527c46231d?auto=format&fit=max&w=1600&q=85",
     "license": "https://unsplash.com/license",
     "use": "Editorial stock photography, not representations of Pop Spec staff, patients, or inventory."
+  },
+  {
+    "file": "popspec_website_catalogue/static/src/img/classic.jpg",
+    "source": "https://unsplash.com/photos/0R1ci4Rb9jU",
+    "license": "https://unsplash.com/license",
+    "note": "Illustrative demo product photo. Specifications and prices are fictional examples; no brand affiliation."
+  },
+  {
+    "file": "popspec_website_catalogue/static/src/img/clear.jpg",
+    "source": "https://unsplash.com/photos/33wrtQEMCb4",
+    "license": "https://unsplash.com/license",
+    "note": "Illustrative demo product photo. Specifications and prices are fictional examples; no brand affiliation."
+  },
+  {
+    "file": "popspec_website_catalogue/static/src/img/silver.jpg",
+    "source": "https://unsplash.com/photos/Mv7kokwzIMw",
+    "license": "https://unsplash.com/license",
+    "note": "Illustrative demo product photo. Specifications and prices are fictional examples; no brand affiliation."
+  },
+  {
+    "file": "popspec_website_catalogue/static/src/img/round.jpg",
+    "source": "https://unsplash.com/photos/OWfBsDDOUlQ",
+    "license": "https://unsplash.com/license",
+    "note": "Illustrative demo product photo. Specifications and prices are fictional examples; no brand affiliation."
+  },
+  {
+    "file": "popspec_website_catalogue/static/src/img/bold.jpg",
+    "source": "https://unsplash.com/photos/bSjqyqukCjY",
+    "license": "https://unsplash.com/license",
+    "note": "Illustrative demo product photo. Specifications and prices are fictional examples; no brand affiliation."
+  },
+  {
+    "file": "popspec_website_catalogue/static/src/img/crystal.jpg",
+    "source": "https://unsplash.com/photos/iNo9sebuKPY",
+    "license": "https://unsplash.com/license",
+    "note": "Illustrative demo product photo. Specifications and prices are fictional examples; no brand affiliation."
   }
 ]

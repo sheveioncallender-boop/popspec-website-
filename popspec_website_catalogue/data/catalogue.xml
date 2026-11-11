@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="popspec_website.category_1" model="product.public.category"><field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/classic.jpg"/></record><record id="demo_category" model="product.category">
+      <field name="name">Pop Spec / Optical Frames</field>
+    </record>
+    <record id="demo_public_category" model="product.public.category">
+      <field name="name">The Frame Edit</field>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="popspec_homepage_featured" eval="True"/>
+      <field name="sequence">5</field>
+      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/classic.jpg"/>
+    </record>
+    <record id="demo_supplier" model="res.partner">
+      <field name="name">Sample Optical Supplier</field>
+      <field name="is_company" eval="True"/>
+      <field name="supplier_rank">1</field>
+      <field name="comment">Demonstration supplier record. No real supplier contact or payment details.</field>
+    </record>
+    <record id="attr_1" model="product.attribute">
+      <field name="name">Brand</field>
+      <field name="create_variant">no_variant</field>
+      <field name="display_type">pills</field>
+    </record>
+    <record id="attr_1_value_1" model="product.attribute.value">
+      <field name="name">Pop Spec</field>
+      <field name="attribute_id" ref="attr_1"/>
+    </record>
+    <record id="attr_2" model="product.attribute">
+      <field name="name">Model</field>
+      <field name="create_variant">no_variant</field>
+      <field name="display_type">pills</field>
+    </record>
+    <record id="attr_2_value_1" model="product.attribute.value">
+      <field name="name">PS-D01</field>
+      <field name="attribute_id" ref="attr_2"/>
+    </record>
+    <record id="attr_3" model="product.attribute">
+      <field name="name">Colour</field>
+      <field name="create_variant">no_variant</field>
+      <field name="display_type">pills</field>
+    </record>
+    <record id="attr_3_value_1" model="product.attribute.value">
+      <field name="name">Black</field>
+      <field name="attribute_id" ref="attr_3"/>
+    </record>
+    <record id="attr_4" model="product.attribute">
+      <field name="name">Frame size (lens–bridge–temple mm)</field>
+      <field name="create_variant">no_variant</field>
+      <field name="display_type">pills</field>
+    </record>
+    <record id="attr_4_value_1" model="product.attribute.value">
+      <field name="name">52–18–140</field>
+      <field name="attribute_id" ref="attr_4"/>
+    </record>
+    <record id="attr_5" model="product.attribute">
+      <field name="name">Material</field>
+      <field name="create_variant">no_variant</field>
+      <field name="display_type">pills</field>
+    </record>
+    <record id="attr_5_value_1" model="product.attribute.value">
+      <field name="name">Acetate</field>
+      <field name="attribute_id" ref="attr_5"/>
+    </record>
+    <record id="attr_6" model="product.attribute">
+      <field name="name">Shape</field>
+      <field name="create_variant">no_variant</field>
+      <field name="display_type">pills</field>
+    </record>
+    <record id="attr_6_value_1" model="product.attribute.value">
+      <field name="name">Rounded</field>
+      <field name="attribute_id" ref="attr_6"/>
+    </record>
+    <record id="demo_frame_1" model="product.template">
+      <field name="name">Classic Black</field>
+      <field name="type">consu</field>
+      <field name="is_storable" eval="True"/>
+      <field name="tracking">serial</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="purchase_ok" eval="True"/>
+      <field name="default_code">PS-001</field>
+      <field name="barcode">PS-SKU-001</field>
+      <field name="list_price">450</field>
+      <field name="standard_price">180</field>
+      <field name="categ_id" ref="demo_category"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="is_published" eval="True"/>
+      <field name="popspec_homepage_featured" eval="True"/>
+      <field name="allow_out_of_stock_order" eval="False"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
+      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/classic.jpg"/>
+      <field name="description_sale">A familiar silhouette with a confident finish. Classic Black brings clean lines and an easy-to-style look to your everyday eyewear.</field>
+      <field name="website_description" type="html"><div><h3>Classic Black</h3><p>A familiar silhouette with a confident finish. Classic Black brings clean lines and an easy-to-style look to your everyday eyewear.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
+    <record id="demo_frame_1_attr_0" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_1"/>
+      <field name="attribute_id" ref="attr_1"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_1_value_1')])]"/>
+    </record>
+    <record id="demo_frame_1_attr_1" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_1"/>
+      <field name="attribute_id" ref="attr_2"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_2_value_1')])]"/>
+    </record>
+    <record id="demo_frame_1_attr_2" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_1"/>
+      <field name="attribute_id" ref="attr_3"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_3_value_1')])]"/>
+    </record>
+    <record id="demo_frame_1_attr_3" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_1"/>
+      <field name="attribute_id" ref="attr_4"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_4_value_1')])]"/>
+    </record>
+    <record id="demo_frame_1_attr_4" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_1"/>
+      <field name="attribute_id" ref="attr_5"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_5_value_1')])]"/>
+    </record>
+    <record id="demo_frame_1_attr_5" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_1"/>
+      <field name="attribute_id" ref="attr_6"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_6_value_1')])]"/>
+    </record>
+    <record id="demo_supplier_price_1" model="product.supplierinfo">
+      <field name="partner_id" ref="demo_supplier"/>
+      <field name="product_tmpl_id" ref="demo_frame_1"/>
+      <field name="price">180</field>
+      <field name="min_qty">1</field>
+      <field name="delay">7</field>
+      <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_serial_1" model="stock.lot">
+      <field name="name">PS-001-0001</field>
+      <field name="product_id" search="[('product_tmpl_id', '=', ref('demo_frame_1'))]"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="note">Demo serial identity only. Zero stock; no receipt, stock movement or valuation created.</field>
+    </record>
+    <record id="attr_2_value_2" model="product.attribute.value">
+      <field name="name">PS-D02</field>
+      <field name="attribute_id" ref="attr_2"/>
+    </record>
+    <record id="attr_3_value_2" model="product.attribute.value">
+      <field name="name">Transparent</field>
+      <field name="attribute_id" ref="attr_3"/>
+    </record>
+    <record id="attr_4_value_2" model="product.attribute.value">
+      <field name="name">53–17–140</field>
+      <field name="attribute_id" ref="attr_4"/>
+    </record>
+    <record id="attr_6_value_2" model="product.attribute.value">
+      <field name="name">Rectangle</field>
+      <field name="attribute_id" ref="attr_6"/>
+    </record>
+    <record id="demo_frame_2" model="product.template">
+      <field name="name">Clear View</field>
+      <field name="type">consu</field>
+      <field name="is_storable" eval="True"/>
+      <field name="tracking">serial</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="purchase_ok" eval="True"/>
+      <field name="default_code">PS-002</field>
+      <field name="barcode">PS-SKU-002</field>
+      <field name="list_price">495</field>
+      <field name="standard_price">195</field>
+      <field name="categ_id" ref="demo_category"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="is_published" eval="True"/>
+      <field name="popspec_homepage_featured" eval="True"/>
+      <field name="allow_out_of_stock_order" eval="False"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
+      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/clear.jpg"/>
+      <field name="description_sale">Keep your look light. Clear View pairs a transparent finish with a modern rectangular silhouette that lets your personal style shine.</field>
+      <field name="website_description" type="html"><div><h3>Clear View</h3><p>Keep your look light. Clear View pairs a transparent finish with a modern rectangular silhouette that lets your personal style shine.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
+    <record id="demo_frame_2_attr_0" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_2"/>
+      <field name="attribute_id" ref="attr_1"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_1_value_1')])]"/>
+    </record>
+    <record id="demo_frame_2_attr_1" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_2"/>
+      <field name="attribute_id" ref="attr_2"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_2_value_2')])]"/>
+    </record>
+    <record id="demo_frame_2_attr_2" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_2"/>
+      <field name="attribute_id" ref="attr_3"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_3_value_2')])]"/>
+    </record>
+    <record id="demo_frame_2_attr_3" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_2"/>
+      <field name="attribute_id" ref="attr_4"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_4_value_2')])]"/>
+    </record>
+    <record id="demo_frame_2_attr_4" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_2"/>
+      <field name="attribute_id" ref="attr_5"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_5_value_1')])]"/>
+    </record>
+    <record id="demo_frame_2_attr_5" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_2"/>
+      <field name="attribute_id" ref="attr_6"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_6_value_2')])]"/>
+    </record>
+    <record id="demo_supplier_price_2" model="product.supplierinfo">
+      <field name="partner_id" ref="demo_supplier"/>
+      <field name="product_tmpl_id" ref="demo_frame_2"/>
+      <field name="price">195</field>
+      <field name="min_qty">1</field>
+      <field name="delay">7</field>
+      <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_serial_2" model="stock.lot">
+      <field name="name">PS-002-0001</field>
+      <field name="product_id" search="[('product_tmpl_id', '=', ref('demo_frame_2'))]"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="note">Demo serial identity only. Zero stock; no receipt, stock movement or valuation created.</field>
+    </record>
+    <record id="attr_2_value_3" model="product.attribute.value">
+      <field name="name">PS-D03</field>
+      <field name="attribute_id" ref="attr_2"/>
+    </record>
+    <record id="attr_3_value_3" model="product.attribute.value">
+      <field name="name">Silver</field>
+      <field name="attribute_id" ref="attr_3"/>
+    </record>
+    <record id="attr_4_value_3" model="product.attribute.value">
+      <field name="name">50–19–140</field>
+      <field name="attribute_id" ref="attr_4"/>
+    </record>
+    <record id="attr_5_value_2" model="product.attribute.value">
+      <field name="name">Metal</field>
+      <field name="attribute_id" ref="attr_5"/>
+    </record>
+    <record id="attr_6_value_3" model="product.attribute.value">
+      <field name="name">Round</field>
+      <field name="attribute_id" ref="attr_6"/>
+    </record>
+    <record id="demo_frame_3" model="product.template">
+      <field name="name">Silver Line</field>
+      <field name="type">consu</field>
+      <field name="is_storable" eval="True"/>
+      <field name="tracking">serial</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="purchase_ok" eval="True"/>
+      <field name="default_code">PS-003</field>
+      <field name="barcode">PS-SKU-003</field>
+      <field name="list_price">575</field>
+      <field name="standard_price">230</field>
+      <field name="categ_id" ref="demo_category"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="is_published" eval="True"/>
+      <field name="popspec_homepage_featured" eval="True"/>
+      <field name="allow_out_of_stock_order" eval="False"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
+      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/silver.jpg"/>
+      <field name="description_sale">A lighter expression of classic eyewear. Silver Line combines a fine metal profile with a rounded silhouette for an understated look.</field>
+      <field name="website_description" type="html"><div><h3>Silver Line</h3><p>A lighter expression of classic eyewear. Silver Line combines a fine metal profile with a rounded silhouette for an understated look.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
+    <record id="demo_frame_3_attr_0" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_3"/>
+      <field name="attribute_id" ref="attr_1"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_1_value_1')])]"/>
+    </record>
+    <record id="demo_frame_3_attr_1" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_3"/>
+      <field name="attribute_id" ref="attr_2"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_2_value_3')])]"/>
+    </record>
+    <record id="demo_frame_3_attr_2" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_3"/>
+      <field name="attribute_id" ref="attr_3"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_3_value_3')])]"/>
+    </record>
+    <record id="demo_frame_3_attr_3" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_3"/>
+      <field name="attribute_id" ref="attr_4"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_4_value_3')])]"/>
+    </record>
+    <record id="demo_frame_3_attr_4" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_3"/>
+      <field name="attribute_id" ref="attr_5"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_5_value_2')])]"/>
+    </record>
+    <record id="demo_frame_3_attr_5" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_3"/>
+      <field name="attribute_id" ref="attr_6"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_6_value_3')])]"/>
+    </record>
+    <record id="demo_supplier_price_3" model="product.supplierinfo">
+      <field name="partner_id" ref="demo_supplier"/>
+      <field name="product_tmpl_id" ref="demo_frame_3"/>
+      <field name="price">230</field>
+      <field name="min_qty">1</field>
+      <field name="delay">7</field>
+      <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_serial_3" model="stock.lot">
+      <field name="name">PS-003-0001</field>
+      <field name="product_id" search="[('product_tmpl_id', '=', ref('demo_frame_3'))]"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="note">Demo serial identity only. Zero stock; no receipt, stock movement or valuation created.</field>
+    </record>
+    <record id="attr_2_value_4" model="product.attribute.value">
+      <field name="name">PS-D04</field>
+      <field name="attribute_id" ref="attr_2"/>
+    </record>
+    <record id="attr_4_value_4" model="product.attribute.value">
+      <field name="name">51–19–145</field>
+      <field name="attribute_id" ref="attr_4"/>
+    </record>
+    <record id="demo_frame_4" model="product.template">
+      <field name="name">Everyday Round</field>
+      <field name="type">consu</field>
+      <field name="is_storable" eval="True"/>
+      <field name="tracking">serial</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="purchase_ok" eval="True"/>
+      <field name="default_code">PS-004</field>
+      <field name="barcode">PS-SKU-004</field>
+      <field name="list_price">525</field>
+      <field name="standard_price">210</field>
+      <field name="categ_id" ref="demo_category"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="is_published" eval="True"/>
+      <field name="popspec_homepage_featured" eval="True"/>
+      <field name="allow_out_of_stock_order" eval="False"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
+      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/round.jpg"/>
+      <field name="description_sale">An effortless everyday favourite. A slim dark profile and rounded shape bring a considered touch to workdays and weekends.</field>
+      <field name="website_description" type="html"><div><h3>Everyday Round</h3><p>An effortless everyday favourite. A slim dark profile and rounded shape bring a considered touch to workdays and weekends.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
+    <record id="demo_frame_4_attr_0" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_4"/>
+      <field name="attribute_id" ref="attr_1"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_1_value_1')])]"/>
+    </record>
+    <record id="demo_frame_4_attr_1" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_4"/>
+      <field name="attribute_id" ref="attr_2"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_2_value_4')])]"/>
+    </record>
+    <record id="demo_frame_4_attr_2" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_4"/>
+      <field name="attribute_id" ref="attr_3"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_3_value_1')])]"/>
+    </record>
+    <record id="demo_frame_4_attr_3" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_4"/>
+      <field name="attribute_id" ref="attr_4"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_4_value_4')])]"/>
+    </record>
+    <record id="demo_frame_4_attr_4" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_4"/>
+      <field name="attribute_id" ref="attr_5"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_5_value_2')])]"/>
+    </record>
+    <record id="demo_frame_4_attr_5" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_4"/>
+      <field name="attribute_id" ref="attr_6"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_6_value_3')])]"/>
+    </record>
+    <record id="demo_supplier_price_4" model="product.supplierinfo">
+      <field name="partner_id" ref="demo_supplier"/>
+      <field name="product_tmpl_id" ref="demo_frame_4"/>
+      <field name="price">210</field>
+      <field name="min_qty">1</field>
+      <field name="delay">7</field>
+      <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_serial_4" model="stock.lot">
+      <field name="name">PS-004-0001</field>
+      <field name="product_id" search="[('product_tmpl_id', '=', ref('demo_frame_4'))]"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="note">Demo serial identity only. Zero stock; no receipt, stock movement or valuation created.</field>
+    </record>
+    <record id="attr_2_value_5" model="product.attribute.value">
+      <field name="name">PS-D05</field>
+      <field name="attribute_id" ref="attr_2"/>
+    </record>
+    <record id="attr_4_value_5" model="product.attribute.value">
+      <field name="name">54–18–145</field>
+      <field name="attribute_id" ref="attr_4"/>
+    </record>
+    <record id="demo_frame_5" model="product.template">
+      <field name="name">Bold Profile</field>
+      <field name="type">consu</field>
+      <field name="is_storable" eval="True"/>
+      <field name="tracking">serial</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="purchase_ok" eval="True"/>
+      <field name="default_code">PS-005</field>
+      <field name="barcode">PS-SKU-005</field>
+      <field name="list_price">550</field>
+      <field name="standard_price">220</field>
+      <field name="categ_id" ref="demo_category"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="is_published" eval="True"/>
+      <field name="popspec_homepage_featured" eval="True"/>
+      <field name="allow_out_of_stock_order" eval="False"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
+      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/bold.jpg"/>
+      <field name="description_sale">Make your frames part of your signature. Bold Profile brings a strong rectangular silhouette and a crisp black finish.</field>
+      <field name="website_description" type="html"><div><h3>Bold Profile</h3><p>Make your frames part of your signature. Bold Profile brings a strong rectangular silhouette and a crisp black finish.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
+    <record id="demo_frame_5_attr_0" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_5"/>
+      <field name="attribute_id" ref="attr_1"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_1_value_1')])]"/>
+    </record>
+    <record id="demo_frame_5_attr_1" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_5"/>
+      <field name="attribute_id" ref="attr_2"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_2_value_5')])]"/>
+    </record>
+    <record id="demo_frame_5_attr_2" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_5"/>
+      <field name="attribute_id" ref="attr_3"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_3_value_1')])]"/>
+    </record>
+    <record id="demo_frame_5_attr_3" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_5"/>
+      <field name="attribute_id" ref="attr_4"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_4_value_5')])]"/>
+    </record>
+    <record id="demo_frame_5_attr_4" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_5"/>
+      <field name="attribute_id" ref="attr_5"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_5_value_1')])]"/>
+    </record>
+    <record id="demo_frame_5_attr_5" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_5"/>
+      <field name="attribute_id" ref="attr_6"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_6_value_2')])]"/>
+    </record>
+    <record id="demo_supplier_price_5" model="product.supplierinfo">
+      <field name="partner_id" ref="demo_supplier"/>
+      <field name="product_tmpl_id" ref="demo_frame_5"/>
+      <field name="price">220</field>
+      <field name="min_qty">1</field>
+      <field name="delay">7</field>
+      <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_serial_5" model="stock.lot">
+      <field name="name">PS-005-0001</field>
+      <field name="product_id" search="[('product_tmpl_id', '=', ref('demo_frame_5'))]"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="note">Demo serial identity only. Zero stock; no receipt, stock movement or valuation created.</field>
+    </record>
+    <record id="attr_2_value_6" model="product.attribute.value">
+      <field name="name">PS-D06</field>
+      <field name="attribute_id" ref="attr_2"/>
+    </record>
+    <record id="attr_4_value_6" model="product.attribute.value">
+      <field name="name">52–18–145</field>
+      <field name="attribute_id" ref="attr_4"/>
+    </record>
+    <record id="attr_6_value_4" model="product.attribute.value">
+      <field name="name">Soft square</field>
+      <field name="attribute_id" ref="attr_6"/>
+    </record>
+    <record id="demo_frame_6" model="product.template">
+      <field name="name">Crystal Edit</field>
+      <field name="type">consu</field>
+      <field name="is_storable" eval="True"/>
+      <field name="tracking">serial</field>
+      <field name="sale_ok" eval="True"/>
+      <field name="purchase_ok" eval="True"/>
+      <field name="default_code">PS-006</field>
+      <field name="barcode">PS-SKU-006</field>
+      <field name="list_price">595</field>
+      <field name="standard_price">238</field>
+      <field name="categ_id" ref="demo_category"/>
+      <field name="website_id" ref="website.default_website"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="is_published" eval="True"/>
+      <field name="popspec_homepage_featured" eval="True"/>
+      <field name="allow_out_of_stock_order" eval="False"/>
+      <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
+      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/crystal.jpg"/>
+      <field name="description_sale">A fresh take on everyday frames. Crystal Edit balances a transparent finish with a softly squared silhouette.</field>
+      <field name="website_description" type="html"><div><h3>Crystal Edit</h3><p>A fresh take on everyday frames. Crystal Edit balances a transparent finish with a softly squared silhouette.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
+    <record id="demo_frame_6_attr_0" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_6"/>
+      <field name="attribute_id" ref="attr_1"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_1_value_1')])]"/>
+    </record>
+    <record id="demo_frame_6_attr_1" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_6"/>
+      <field name="attribute_id" ref="attr_2"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_2_value_6')])]"/>
+    </record>
+    <record id="demo_frame_6_attr_2" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_6"/>
+      <field name="attribute_id" ref="attr_3"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_3_value_2')])]"/>
+    </record>
+    <record id="demo_frame_6_attr_3" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_6"/>
+      <field name="attribute_id" ref="attr_4"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_4_value_6')])]"/>
+    </record>
+    <record id="demo_frame_6_attr_4" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_6"/>
+      <field name="attribute_id" ref="attr_5"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_5_value_1')])]"/>
+    </record>
+    <record id="demo_frame_6_attr_5" model="product.template.attribute.line">
+      <field name="product_tmpl_id" ref="demo_frame_6"/>
+      <field name="attribute_id" ref="attr_6"/>
+      <field name="value_ids" eval="[(6, 0, [ref('attr_6_value_4')])]"/>
+    </record>
+    <record id="demo_supplier_price_6" model="product.supplierinfo">
+      <field name="partner_id" ref="demo_supplier"/>
+      <field name="product_tmpl_id" ref="demo_frame_6"/>
+      <field name="price">238</field>
+      <field name="min_qty">1</field>
+      <field name="delay">7</field>
+      <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="demo_serial_6" model="stock.lot">
+      <field name="name">PS-006-0001</field>
+      <field name="product_id" search="[('product_tmpl_id', '=', ref('demo_frame_6'))]"/>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="note">Demo serial identity only. Zero stock; no receipt, stock movement or valuation created.</field>
+    </record>
+  </data>
+</odoo>

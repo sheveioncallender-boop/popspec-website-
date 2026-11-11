@@ -1,0 +1,35 @@
+/* Presentation only: retain Odoo's form, menu and ecommerce interactions. */
+.popspec-site .ps-mobile-contact{display:flex;flex-direction:column;gap:14px;padding:25px 0;margin-top:24px;border-top:1px solid #dce5e2}
+.popspec-site .ps-mobile-contact>span{color:#007f91;font-size:10px;font-weight:600;letter-spacing:.16em}
+.popspec-site .ps-mobile-contact>a{color:#152729;text-decoration:none;font-size:17px;font-weight:500;line-height:1.5;overflow-wrap:anywhere}
+.popspec-site .ps-mobile-contact>a:last-child{font-size:14px}
+.popspec-site .ps-mobile-contact .fa{margin-right:9px;color:#007f91}
+.popspec-site .ps-mobile-contact a:focus-visible{outline:3px solid #00a6c4;outline-offset:4px}
+.ps-contact-page .ps-contact-hero{background:#edf3ef;border-bottom:1px solid #dce5df}
+.ps-contact-page .ps-contact-hero>.wrap{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:7%;padding:70px 0}
+.ps-contact-page .ps-contact-hero h1{font-size:clamp(45px,5vw,76px);line-height:1.06;letter-spacing:-.05em}
+.ps-contact-page .ps-contact-hero p{max-width:460px;margin-bottom:0}
+.ps-contact-page .ps-contact-hero img{height:330px;object-fit:cover;object-position:center;border-radius:2px}
+.ps-contact-page .ps-enquiry-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:9%;padding-top:85px;padding-bottom:95px;align-items:start}
+.ps-contact-page .ps-enquiry-form h2{font-size:clamp(34px,3.2vw,48px)}
+.ps-contact-page .ps-enquiry-form>p{font-size:14px;line-height:1.8;max-width:540px;margin-bottom:35px}
+.ps-contact-page .ps-form-container{padding:0}
+.ps-contact-page .s_website_form_label{display:block;font-size:12px;font-weight:600;line-height:1.5;margin-bottom:9px;width:auto!important;color:#263c3e}
+.ps-contact-page .s_website_form_field .form-control{border:1px solid #cedbd7;border-radius:0;padding:13px 14px;font-family:inherit;font-size:15px;min-height:49px;background:#fbfcfa;color:#152729;box-shadow:none}
+.ps-contact-page .s_website_form_field .form-control:focus{border-color:#007f91;outline:2px solid #007f9122;outline-offset:2px;background:#fff}
+.ps-contact-page textarea.form-control{min-height:170px;resize:vertical}
+.ps-contact-page .s_website_form_mark{color:#007f91}
+.ps-contact-page .s_website_form_submit{text-align:left!important}
+.ps-contact-page .s_website_form_send{color:#fff;border-radius:0;padding:16px 25px;font-size:13px;font-weight:600;background:#007f91;border-color:#007f91}
+.ps-contact-page .s_website_form_send:hover{color:#fff;background:#005d6a;border-color:#005d6a}
+.ps-contact-page .s_website_form_send:focus-visible{outline:3px solid #00a6c4;outline-offset:4px}
+.ps-contact-page .ps-contact-aside{padding:37px 36px;background:#f4f5f0;border-top:3px solid #007f91;min-width:0}
+.ps-contact-page .ps-contact-aside h2{font-size:32px;margin-bottom:26px}
+.ps-contact-page .ps-phone-big{display:block;font-size:clamp(19px,1.8vw,25px);font-weight:500;letter-spacing:-.025em;line-height:1.65}
+.ps-contact-page .ps-contact-item{border-top:1px solid #d7e0db;margin-top:25px;padding-top:24px}
+.ps-contact-page .ps-contact-item h3{font-size:17px;letter-spacing:-.02em;margin-bottom:12px}
+.ps-contact-page .ps-contact-item a{font-size:14px;overflow-wrap:anywhere}
+.ps-contact-page .ps-contact-item p{font-size:14px;line-height:1.8;margin:10px 0}
+.ps-contact-page .ps-contact-aside>.button{margin-top:25px}
+@media(max-width:991px){.ps-contact-page .ps-enquiry-layout{gap:5%}.ps-contact-page .ps-contact-aside{padding:28px 23px}.ps-contact-page .ps-contact-hero>.wrap{gap:5%}.ps-contact-page .ps-contact-hero img{height:290px}}
+@media(max-width:767px){.ps-contact-page .ps-contact-hero>.wrap{grid-template-columns:1fr;padding:40px 0;gap:30px}.ps-contact-page .ps-contact-hero h1{font-size:46px}.ps-contact-page .ps-contact-hero img{height:230px}.ps-contact-page .ps-enquiry-layout{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:50px}.ps-contact-page .ps-contact-aside{padding:28px}.ps-contact-page .ps-phone-big{font-size:23px}.ps-contact-page .ps-contact-item a{font-size:15px}}

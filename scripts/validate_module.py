@@ -71,3 +71,34 @@ print('PASS: XML schema, QWeb expressions, Python/JS syntax, SCSS, local assets,
 
 from check_native_templates import validate_native_templates
 validate_native_templates(args.odoo_source, module)
+
+refresh = root / 'popspec_website_catalogue'
+refresh_manifest = ast.literal_eval((refresh / '__manifest__.py').read_text())
+for rel in refresh_manifest['data']:
+    doc = etree.parse(str(refresh / rel))
+    schema.assertValid(doc)
+    for node in doc.xpath('//*[@file]'):
+        assert (root / node.get('file')).is_file()
+    for node in doc.iter():
+        for attr, expression in node.attrib.items():
+            if attr in ('eval', 'search', 't-value', 't-if', 't-elif', 't-foreach', 't-out', 't-options') or attr.startswith('t-att-'):
+                ast.parse(expression, mode='eval')
+for path in refresh.rglob('*.py'):
+    ast.parse(path.read_text(), filename=str(path))
+for bundle in refresh_manifest['assets'].values():
+    for rel in bundle:
+        path=root / rel
+        assert path.is_file()
+        assert not [x for x in tinycss2.parse_stylesheet(path.read_text()) if x.type=='error']
+seed = etree.parse(str(refresh / 'data/catalogue.xml'))
+assert len(seed.xpath('//record[@model="product.template"]')) == 6
+assert len(seed.xpath('//record[@model="stock.lot"]')) == 6
+assert not seed.xpath('//record[@model="stock.quant" or @model="stock.move" or @model="sale.order" or @model="account.move"]')
+for product in seed.xpath('//record[@model="product.template"]'):
+    for field in ('name', 'description_sale', 'website_description'):
+        assert 'demo' not in ''.join(product.find(f'field[@name="{field}"]').itertext()).lower()
+    assert product.find('field[@name="tracking"]').text == 'serial'
+for path in (refresh/'static/src/img').glob('*.jpg'):
+    with Image.open(path) as image:
+        image.verify()
+print('PASS: six native frame records, imagery and specifications; no customer-facing demo labels or inventory/accounting transactions.')

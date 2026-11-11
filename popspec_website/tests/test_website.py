@@ -10,10 +10,10 @@ class TestPopSpecWebsite(HttpCase):
         super().setUpClass()
         cls.website = cls.env.ref('website.default_website')
         cls.website.write({'domain': False, 'ecommerce_access': 'everyone'})
-        cls.category = cls.env.ref('popspec_website.category_1')
+        cls.category = cls.env['product.public.category'].create({'name': 'Test category', 'website_id': cls.website.id, 'popspec_homepage_featured': True})
         cls.product = cls.env['product.template'].create({
             'name': 'TEST ONLY Optical Frame', 'list_price': 250,
-            'website_id': cls.website.id, 'is_published': True,
+            'website_id': cls.website.id, 'is_published': True, 'popspec_homepage_featured': True,
             'public_categ_ids': [(6, 0, cls.category.ids)],
         })
 
