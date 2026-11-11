@@ -27,9 +27,12 @@ class TestPopSpecCatalogue(HttpCase):
         for path in ['/contactus', '/contactus-thank-you']:
             response = self.url_open(path)
             self.assertEqual(response.status_code, 200)
-            self.assertNotIn('Fake Buena Vista', response.text)
-            self.assertNotIn('555-555-5556', response.text)
-            self.assertNotIn('info@yourcompany.example.com', response.text)
+            page = html.fromstring(response.content)
+            # Check our visible page body, not Odoo's hidden fallback footer.
+            body = page.xpath('//div[@id="wrap"]')[0].text_content()
+            self.assertNotIn('Fake Buena Vista', body)
+            self.assertNotIn('555-555-5556', body)
+            self.assertNotIn('info@yourcompany.example.com', body)
         contact = html.fromstring(self.url_open('/contactus').content)
         self.assertTrue(contact.xpath('//form[@id="contactus_form"][@action="/website/form/"][@data-model_name="mail.mail"]'))
         self.assertTrue(contact.xpath('//input[@name="email_to"]'))
@@ -49,7 +52,7 @@ class TestPopSpecCatalogue(HttpCase):
                 check(phones[0].getBoundingClientRect().width>0, 'Phone visible');
                 console.log('test successful');
             })().catch(e=>console.error(e));
-        """, ready="document.querySelector('.ps-contact-page')", timeout=90)
+        """, ready="document.body.getAttribute('is-ready') === 'true'", timeout=90)
         product = self.env.ref('popspec_website.demo_frame_1')
         response = self.url_open(product.website_url)
         self.assertEqual(response.status_code, 200)

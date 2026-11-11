@@ -95,4 +95,4 @@ class TestPopSpecWebsite(HttpCase):
                 check(first.inert, 'Hidden banner not keyboard focusable');
                 console.log('test successful');
             })().catch(error => console.error(error));
-        """, ready="document.querySelector('.banner-slider .slide-next')", timeout=90)
+        """, ready="document.body.getAttribute('is-ready') === 'true'", timeout=90)
