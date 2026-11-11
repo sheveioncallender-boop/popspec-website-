@@ -62,7 +62,7 @@ def validate_native_templates(source, module):
         assert arch.xpath('//header//t[@t-call="website.template_header_mobile"]')
         count += 1
     print(f'PASS: Odoo inheritance engine, {count} native header layouts; native mobile and cart retained.')
-    refresh = module.parent / 'popspec_website_catalogue/views/website.xml'
+    refresh = module / 'views/refresh.xml'
     if refresh.exists():
         changes = etree.parse(str(refresh))
         native_data = load('addons/website/data/website_data.xml')

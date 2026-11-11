@@ -46,7 +46,10 @@ jobs:
         run: python scripts/validate_module.py --odoo-source /tmp/odoo
       - name: Clean install and native HTTP/cart tests
         run: |
-          python /tmp/odoo/odoo-bin -d popspec_test --db_host=127.0.0.1 --db_port=5432 --db_user=odoo --db_password=odoo_test_only --addons-path=/tmp/odoo/addons,$GITHUB_WORKSPACE -i popspec_website,popspec_website_catalogue --without-demo=True --test-enable --test-tags=/popspec_website,/popspec_website_catalogue --stop-after-init --http-port=8069 --log-level=test --logfile=/tmp/popspec-install.log
+          python /tmp/odoo/odoo-bin -d popspec_test --db_host=127.0.0.1 --db_port=5432 --db_user=odoo --db_password=odoo_test_only --addons-path=/tmp/odoo/addons,$GITHUB_WORKSPACE -i popspec_website --without-demo=True --test-enable --test-tags=/popspec_website --stop-after-init --http-port=8069 --log-level=test --logfile=/tmp/popspec-install.log
+      - name: Upgrade existing records
+        run: |
+          python /tmp/odoo/odoo-bin -d popspec_test --db_host=127.0.0.1 --db_port=5432 --db_user=odoo --db_password=odoo_test_only --addons-path=/tmp/odoo/addons,$GITHUB_WORKSPACE -u popspec_website --without-demo=True --stop-after-init --http-port=8069 --log-level=info --logfile=/tmp/popspec-upgrade.log
       - name: Print Odoo diagnostics on failure
         if: failure()
         run: tail -n 250 /tmp/popspec-*.log || true

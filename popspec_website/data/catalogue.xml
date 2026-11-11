@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
   <data noupdate="1">
-    <record id="popspec_website.category_1" model="product.public.category"><field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/classic.jpg"/></record><record id="demo_category" model="product.category">
+    <record id="popspec_website.category_1" model="product.public.category"><field name="image_1920" type="base64" file="popspec_website/static/src/catalogue/classic.jpg"/></record><record id="demo_category" model="product.category">
       <field name="name">Pop Spec / Optical Frames</field>
     </record>
     <record id="demo_public_category" model="product.public.category">
@@ -9,7 +9,7 @@
       <field name="website_id" ref="website.default_website"/>
       <field name="popspec_homepage_featured" eval="True"/>
       <field name="sequence">5</field>
-      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/classic.jpg"/>
+      <field name="image_1920" type="base64" file="popspec_website/static/src/catalogue/classic.jpg"/>
     </record>
     <record id="demo_supplier" model="res.partner">
       <field name="name">Sample Optical Supplier</field>
@@ -89,7 +89,7 @@
       <field name="popspec_homepage_featured" eval="True"/>
       <field name="allow_out_of_stock_order" eval="False"/>
       <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
-      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/classic.jpg"/>
+      <field name="image_1920" type="base64" file="popspec_website/static/src/catalogue/classic.jpg"/>
       <field name="description_sale">A familiar silhouette with a confident finish. Classic Black brings clean lines and an easy-to-style look to your everyday eyewear.</field>
       <field name="website_description" type="html"><div><h3>Classic Black</h3><p>A familiar silhouette with a confident finish. Classic Black brings clean lines and an easy-to-style look to your everyday eyewear.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
     <record id="demo_frame_1_attr_0" model="product.template.attribute.line">
@@ -170,7 +170,7 @@
       <field name="popspec_homepage_featured" eval="True"/>
       <field name="allow_out_of_stock_order" eval="False"/>
       <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
-      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/clear.jpg"/>
+      <field name="image_1920" type="base64" file="popspec_website/static/src/catalogue/clear.jpg"/>
       <field name="description_sale">Keep your look light. Clear View pairs a transparent finish with a modern rectangular silhouette that lets your personal style shine.</field>
       <field name="website_description" type="html"><div><h3>Clear View</h3><p>Keep your look light. Clear View pairs a transparent finish with a modern rectangular silhouette that lets your personal style shine.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
     <record id="demo_frame_2_attr_0" model="product.template.attribute.line">
@@ -255,7 +255,7 @@
       <field name="popspec_homepage_featured" eval="True"/>
       <field name="allow_out_of_stock_order" eval="False"/>
       <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
-      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/silver.jpg"/>
+      <field name="image_1920" type="base64" file="popspec_website/static/src/catalogue/silver.jpg"/>
       <field name="description_sale">A lighter expression of classic eyewear. Silver Line combines a fine metal profile with a rounded silhouette for an understated look.</field>
       <field name="website_description" type="html"><div><h3>Silver Line</h3><p>A lighter expression of classic eyewear. Silver Line combines a fine metal profile with a rounded silhouette for an understated look.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
     <record id="demo_frame_3_attr_0" model="product.template.attribute.line">
@@ -328,7 +328,7 @@
       <field name="popspec_homepage_featured" eval="True"/>
       <field name="allow_out_of_stock_order" eval="False"/>
       <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
-      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/round.jpg"/>
+      <field name="image_1920" type="base64" file="popspec_website/static/src/catalogue/round.jpg"/>
       <field name="description_sale">An effortless everyday favourite. A slim dark profile and rounded shape bring a considered touch to workdays and weekends.</field>
       <field name="website_description" type="html"><div><h3>Everyday Round</h3><p>An effortless everyday favourite. A slim dark profile and rounded shape bring a considered touch to workdays and weekends.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
     <record id="demo_frame_4_attr_0" model="product.template.attribute.line">
@@ -401,7 +401,7 @@
       <field name="popspec_homepage_featured" eval="True"/>
       <field name="allow_out_of_stock_order" eval="False"/>
       <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
-      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/bold.jpg"/>
+      <field name="image_1920" type="base64" file="popspec_website/static/src/catalogue/bold.jpg"/>
       <field name="description_sale">Make your frames part of your signature. Bold Profile brings a strong rectangular silhouette and a crisp black finish.</field>
       <field name="website_description" type="html"><div><h3>Bold Profile</h3><p>Make your frames part of your signature. Bold Profile brings a strong rectangular silhouette and a crisp black finish.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
     <record id="demo_frame_5_attr_0" model="product.template.attribute.line">
@@ -478,7 +478,7 @@
       <field name="popspec_homepage_featured" eval="True"/>
       <field name="allow_out_of_stock_order" eval="False"/>
       <field name="public_categ_ids" eval="[(6, 0, [ref('demo_public_category'), ref('popspec_website.category_1')])]"/>
-      <field name="image_1920" type="base64" file="popspec_website_catalogue/static/src/img/crystal.jpg"/>
+      <field name="image_1920" type="base64" file="popspec_website/static/src/catalogue/crystal.jpg"/>
       <field name="description_sale">A fresh take on everyday frames. Crystal Edit balances a transparent finish with a softly squared silhouette.</field>
       <field name="website_description" type="html"><div><h3>Crystal Edit</h3><p>A fresh take on everyday frames. Crystal Edit balances a transparent finish with a softly squared silhouette.</p><p>Explore the frame details below, then contact our team for help with fit, lens options and availability. Prescription lenses are selected separately following review of your prescription and measurements.</p></div></field><field name="description">Sample catalogue setup: illustrative price, cost, dimensions and material. Confirm supplier specifications before commercial use. Real photograph represents the style. No opening stock has been created.</field></record>
     <record id="demo_frame_6_attr_0" model="product.template.attribute.line">
